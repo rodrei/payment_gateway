@@ -1,0 +1,39 @@
+# User specific & automatically generated files #
+#################################################
+/Config/gateways.php
+/Config/config.php
+/vendors
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Numerous always-ignore extensions #
+#####################################
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.temporaryFile
+.cache
+.project
+.settings
+nbproject
+.Trash*
+
+# anything with a comma in the name #
+#####################################
+*,*
+
