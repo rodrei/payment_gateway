@@ -1,0 +1,52 @@
+<?php
+/**
+ * Global plugin configuration file.
+ *
+ */
+$gateways = (Configure::check('Gateways')) ? Configure::read('Gateways') : '';
+$cc = (Configure::check('Site.cc')) ? Configure::read('Site.cc') : 'ar';
+
+if (empty($gateways) || empty($cc)) {
+	throw new NotFoundException();
+}
+
+/**
+ * Set Mercado Pago configuration depending on country.
+ * Default country ar.
+ */
+if (array_key_exists($cc, array_flip(array_keys($gateways['MercadoPago'])))) {
+	$mercadoPago = $gateways[MERCADO_PAGO][$cc];
+}
+else {
+	$mercadoPago = $gateways[MERCADO_PAGO]['ar'];
+}
+
+/**
+ * If we have an 'Environment Configuration' in our application we use to set, if not you can create it.
+ * Switch behalf 'production' or development (used to change to sandbox mode).
+ */
+if (Configure::check('Environment') && ($environment = Configure::read('Environment.active'))) {
+	switch ($environment) {
+		case 'production':
+			$mercadoPago['environment'] = $environment;
+			break;
+		case 'development':
+			$mercadoPago['environment'] = $environment;
+			$mercadoPago['authentication'] = array(
+				'clientId' => 'xxxxxxxxxxxxxxxx',
+				'clientSecret' => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+			);
+			break;
+	}
+}
+else {
+	$cc = 'ar';
+	$mercadoPago['environment'] = PRODUCTION;
+}
+
+/**
+ * Set gateways configuration.
+ *
+ * @example $config[<Gateway>]
+ */
+$config[MERCADO_PAGO] = $mercadoPago;
