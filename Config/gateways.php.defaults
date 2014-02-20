@@ -1,0 +1,53 @@
+<?php
+/**
+ * Config Sites for Mercado Pago.
+ */
+$config['Gateways'] = array(
+	'MercadoPago' => array(
+		'ar' => array(
+			'authentication' => array(
+				'clientId' => 'xxxxxxxxxxxxxxxx',
+				'clientSecret' => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+			),
+			'cc' => 'ar',
+			'currency' => 'ARS',
+			'sitesId' => 'MLA'
+		),
+		'br' => array(
+			'authentication' => array(
+				'clientId' => 'xxxxxxxxxxxxxxxx',
+				'clientSecret' => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+			),
+			'cc' => 'br',
+			'currency' => 'BRL',
+			'sitesId' => 'MLB'
+		),
+		'mx' => array(
+			'authentication' => array(
+				'clientId' => 'xxxxxxxxxxxxxxxx',
+				'clientSecret' => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+			),
+			'cc' => 'mx',
+			'currency' => 'MXN',
+			'sitesId' => 'MLM'
+		),
+		've' => array(
+			'authentication' => array(
+				'clientId' => 'xxxxxxxxxxxxxxxx',
+				'clientSecret' => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+			),
+			'cc' => 've',
+			'currency' => 'VEF',
+			'sitesId' => 'MLV'
+		),
+		'co' => array(
+			'authentication' => array(
+				'clientId' => 'xxxxxxxxxxxxxxxx',
+				'clientSecret' => 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+			),
+			'cc' => 'co',
+			'currency' => 'COP',
+			'sitesId' => 'MCO'
+		)
+	)
+);
