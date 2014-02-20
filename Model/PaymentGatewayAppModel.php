@@ -1,7 +1,4 @@
 <?php
-
 App::uses('AppModel', 'Model');
 
-class PaymentGatewayAppModel extends AppModel {
-
-}
+class PaymentGatewayAppModel extends AppModel {}
