@@ -32,7 +32,7 @@ class MercadoPagoBehavior extends ModelBehavior {
 		App::import('Vendor', 'PaymentGateway.MP', array('file' => 'MercadoPago' . DS . 'lib' . DS . 'mercadopago.php'));
 		$this->MP = new MP($authentication['clientId'], $authentication['clientSecret']);
 
-		if ($this->_site['environment']) {
+		if ($this->_site['environment'] === 'development') {
 			$this->_sandbox = $this->MP->sandbox_mode(true);
 		}
 	}
