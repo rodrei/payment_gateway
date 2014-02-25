@@ -128,7 +128,7 @@ class MercadoPagoHelper extends Helper {
 				'font' => $this->_buttonFonts['arial'],
 				'size' => $this->_buttonSizes['small'],
 				'shape' => $this->_buttonShapes['rounded'],
-				'logo' => ''
+				'logo' => $this->_buttonLogosAll[$site['cc']]
 			),
 			'mode' => 'redirect'
 		);
@@ -136,11 +136,6 @@ class MercadoPagoHelper extends Helper {
 		if (!empty($settings)) {
 			$this->defaultSettings = array_merge($this->defaultSettings, (array)$settings);
 		}
-
-		if (!Configure::check(MERCADO_PAGO)) {
-			throw new NotFoundException();
-		}
-		$site = Configure::read(MERCADO_PAGO);
 	}
 
 /**
