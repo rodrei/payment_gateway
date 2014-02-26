@@ -12,8 +12,8 @@ Now only implemented Mercado Pago.
 ## Configuration Files
 
 You have to fill the next settings:
-* gateways.default has among other things clientId and clientSecret per country.
-* config.default set if plugin is in sandbox or production mode, also you have to set sandbox clientId and clientSecret.
+* `gateways.default` has among other things `clientId` and `clientSecret` per country.
+* `config.default` set if plugin is in sandbox or production mode, also you have to set sandbox `clientId` and `clientSecret`.
 
 ## Installation
 
