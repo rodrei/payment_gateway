@@ -77,7 +77,7 @@ For example get specific direct payment:
 
 ## Documentation
 
-[Mercado Pago Developers](https://www.google.com.ar/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&ved=0CEMQjBAwAQ&url=https%3A%2F%2Fdevelopers.mercadopago.com%2F&ei=3zkOU769JIWIkQfC7YDwBg&usg=AFQjCNFc6Jp6kfVtc5LWNyTFC0C5Kv06AQ&sig2=7MS0Pj51kcI36nfsgo7MQg&bvm=bv.61965928,d.eW0)
+[Mercado Pago Developers](https://developers.mercadopago.com/)
 
 ## Contributing to this Plugin
 
